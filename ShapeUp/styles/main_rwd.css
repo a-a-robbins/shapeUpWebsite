@@ -1,0 +1,241 @@
+/* header, body -main, h1,h2,h3, ul, footer*/
+*{font-family: sans-serif;}
+
+/*header*/
+header{
+  background-image: -webkit-linear-gradient(90deg,lightsteelblue, white);
+  border-bottom: 3px solid steelblue; 
+
+}
+header img{
+  float: left;
+  max-width: 140px;
+  min-width: 70px;
+}
+header h1{
+  color: steelblue;
+  font-style: italic; 
+  text-indent: 2rem;
+  text-shadow: 5% 5% 5% steelblue;
+}
+
+header h3{
+  text-indent: 2rem; 
+}
+
+/*body*/
+
+body{
+  max-width: 1024px;
+  width: 95%; 
+  border: 3px solid steelblue;
+  box-shadow: 0px 10px 9px 9px;   
+  margin: 1em auto;   
+}
+
+#nav_menu{
+  clear: left;
+}
+#nav_menu ul{
+  list-style-type: none;
+  position: relative;
+
+}
+#nav_menu ul li{
+  float: left;
+}
+#nav_menu ul ul{
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+#nav_menu ul ul li{
+  float: none;
+}
+#nav_menu ul li:hover ul{
+  display: block;
+}
+#nav_menu >ul::after{
+  content: " ";
+  clear: both;
+  display: block; 
+}
+#nav_menu ul li a{
+  text-align: center;
+  font-weight: strong;
+  text-decoration: none;
+  display: block;
+  background-color: steelblue;
+  color: white;
+  padding: .625em;
+}
+#nav_menu ul li a.current{
+  color: black;
+}
+#nav_menu ul li a:hover, #nav_menu a:focus{
+  background-color: lightsteelblue;
+}
+#nav_menu ul li:hover ul{
+  display: block;
+}
+#nav_menu > ul::after{
+  content: ""; 
+  display: block;
+  clear: both;
+}
+
+#mobile_menu{
+  display: none;
+}
+
+
+main{
+  clear: both;
+}
+div{
+  margin-right: 1em;
+  margin-left: 0;
+  width: 100%
+}
+
+section{
+  width: 75%;
+  margin-right: 1em;  
+  float: right; 
+  }
+
+h2, h3, p{
+  margin-left: 1rem; 
+  margin-top: 1rem; 
+}
+h1{
+ font-size: 200%;
+}
+
+h2{
+  font-size: 150%;
+}
+
+h3{
+  font-size: 125%;
+  color: maroon;
+}
+
+a:link, a:visited{
+  color: maroon;
+}
+
+a:focus, a:hover{
+  color: steelblue;
+}
+body ul{
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+
+/*aside*/
+
+aside{
+  float: left; 
+  width: 25%;
+}
+aside h2{
+  color: maroon;
+}
+aside a:link, aside a:visited{
+  color: steelblue;
+}
+aside a:focus, aside a:hover{
+  color: maroon;
+}
+aside ul{
+  margin-left: 1rem; 
+  margin-bottom: 0.5rem; 
+  padding-bottom: 1rem; 
+  padding-left: 1rem; 
+  list-style-type: disc; 
+  line-height: 2.0; 
+}
+aside ul a{
+  text-decoration: none;
+}
+
+
+/*footer*/
+footer{
+  clear: both; 
+  font-size: 80%;
+  color: white; 
+  text-align: center;
+  background-color: steelblue;
+  border: 3px solid steelblue; 
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 900px){
+  body{
+    font-size: 90%;
+    box-shadow: none;
+  }
+  footer{
+    font-size: 90;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  #nav_menu{
+    display: none;
+  }
+  #mobile_menu{
+    display: block;
+  }
+ .slicknav_menu{
+    background-color: steelblue !important;
+    max-width: 98.5% !important;
+  }
+  .slicknav_btn{
+    background-color: steelblue !important;
+  }
+  .slicknav_nav a:hover {
+    background-color: lightsteelblue !important;
+  }
+  header h1{
+    font-size: 200%;
+  }
+  aside{
+    width: 100%;
+   
+  }
+  div{
+    width: 100%; 
+       
+  }
+  section{
+    width: 100%;
+   
+  }
+  div blockquote{
+    padding: 0;
+  }
+
+  body aside{
+    vertical-align: bottom;
+  }
+  body div{
+    vertical-align: top;
+  }
+  body section{
+    vertical-align: middle;
+  }
+} 
+
+@media screen and (max-width: 479px){
+  header h1, h2, h3, p{
+    font-size: 90%;
+  }
+ 
+}
